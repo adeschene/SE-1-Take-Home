@@ -1,0 +1,16 @@
+.widget {
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px 35px; // Pad actual table within its container
+  transition: all 0.2s;
+  font-size: 75%;
+  min-width: 650px;
+  // Smaller font-size for smaller screens
+  @media (max-width: 1200px) {
+    font-size: 60%;
+  }
+  // Space out page info from table contents
+  #paginationInfo {
+    padding-top: 26px;
+  }
+}

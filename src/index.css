@@ -1,6 +1,9 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-Regular.otf);
+}
 body {
   background: #20262E;
-  padding: 20px;
-  font-family: Helvetica, sans-serif;
+  color: #3A404E;
+  font-family: 'Montserrat', Helvetica, sans-serif;
 }
-

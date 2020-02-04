@@ -1,0 +1,7 @@
+tbody {
+  color: #3A404E;
+  // Class for numeric-based values; make characters monospaced
+  .numFontMono {
+    font-variant-numeric: tabular-nums;
+  }
+}

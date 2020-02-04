@@ -1,0 +1,49 @@
+thead {
+  color: #2A303E;
+  border-bottom: 6px solid #E9ECEF; // Wider border below header row
+  // '#' column header gets this class after user sorts by anything else
+  .sortingDisabled {
+    cursor: text;
+    user-select: text;
+  }
+  // Class for all column headers that user can sort by
+  .sortableBy {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-right: 30px !important;
+    // Up/Down sorting arrow additions with :before/:after
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      opacity: 0.3;
+      font-family: 'Noto Sans HK', Helvetica, sans-serif;
+    }
+    &:before {
+      bottom: 1.1em;
+      right: 0.9em;
+      content: '\2191'; // Up arrow (ascending)
+    }
+    &:after {
+      bottom: 1em;
+      right: 0.4em;
+      content: '\2193'; // Down arrow (descending)
+    }
+  }
+  /* Column headers will have one of these classes
+    when they're being used to sort by */
+  .sortingByAsc {
+    @extend .sortableBy;
+    // Make up arrow more prominent when sort ascending
+    &:before {
+      opacity: 1;
+    }
+  }
+  .sortingByDesc {
+    @extend .sortableBy;
+    // Make down arrow more prominent when sort descending
+    &:after {
+      opacity: 1;
+    }
+  }
+}

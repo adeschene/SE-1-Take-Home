@@ -1,0 +1,9 @@
+#box-office-table {
+  display: table;
+  margin: 6px 0;
+  // Add borders above each row
+  thead > tr > th,
+  tbody > tr > td {
+    border-top: 2px solid #E9ECEF;
+  }
+}
